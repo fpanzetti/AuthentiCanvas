@@ -1,0 +1,37 @@
+**index.html:**
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea il tuo AuthentiCanvas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Crea il tuo AuthentiCanvas</h1>
+
+    <div id="form-container">
+        <h2>Inserisci i dati per ogni dimensione:</h2>
+        <div id="input-fields">
+            <div class="input-field">
+                <label for="soft-skills">Soft Skills:</label>
+                <input type="text" class="dimension-name" placeholder="Nome">
+                <input type="number" class="dimension-value" min="1" max="5" placeholder="Valore (da 1 a 5)">
+            </div>
+            <!-- Aggiungi qui gli altri campi per le altre dimensioni -->
+        </div>
+        <button onclick="addInputField()">Aggiungi un'altra dimensione</button>
+        <button onclick="generateChart()">Genera Grafico</button>
+        <button onclick="downloadChart()">Scarica Grafico</button>
+    </div>
+
+    <div id="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+```
